@@ -16,7 +16,7 @@ export default function Contact() {
             setName(inputValue);
         } else if (inputType === 'email') {
             setEmail(inputValue);
-        } else { 
+        } else {
             setMessage(inputValue)
         }
     };
@@ -33,7 +33,7 @@ export default function Contact() {
                 "Please add your name"
             );
             return;
-        } 
+        }
         if (!message) {
             setErrorMessage(
                 "Please include a message"
@@ -47,47 +47,49 @@ export default function Contact() {
     }
 
     return (
-        <div className='p-3 col-6'>
-            <h3>Contact Me:</h3>
-            <div className='card p-3 shadow'>
-            <form className='form'>
-                <div class="mb-3">
-                    <label for="name" class="form-label">Name</label>
-                    <input
-                     value={name} 
-                     name="name"
-                     onChange={handleInputChange}
-                     type="text" 
-                     className='form-control'
-                     /> 
+        <div className="row justify-content-center">
+            <div className='p-3 col-9 col-sm-6'>
+                <h3>Contact Me:</h3>
+                <div className='card p-3 shadow'>
+                    <form className='form'>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name:</label>
+                            <input
+                                value={name}
+                                name="name"
+                                onChange={handleInputChange}
+                                type="text"
+                                className='form-control'
+                            />
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email:</label>
+                            <input
+                                value={email}
+                                name="email"
+                                onChange={handleInputChange}
+                                type="email"
+                                className='form-control'
+                            />
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message:</label>
+                            <textarea
+                                value={message}
+                                name="message"
+                                onChange={handleInputChange}
+                                type="text"
+                                className="form-control"
+                            />
+                        </div>
+                        <button type="button" onClick={handleFormSubmit} className="btn btn-primary">Send</button>
+                    </form>
+                    {errorMessage && (
+                        <div className="p-3">
+                            <p className="error-text">{errorMessage}</p>
+                        </div>
+                    )}
                 </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">Email</label>
-                    <input
-                     value={email} 
-                     name="email"
-                     onChange={handleInputChange}
-                     type="email" 
-                     className='form-control'
-                     /> 
-                </div>
-                <div class="mb-3">
-                    <label for="message" class="form-label">Message</label>
-                    <textarea 
-                    value={message}
-                    name="message"
-                    onChange={handleInputChange}
-                    type="text" 
-                    className="form-control" 
-                    />
-                </div>
-                <button type="submit" onClick={handleFormSubmit} className="btn btn-primary">Submit</button>
-            </form>
-                {errorMessage && (
-            <div className="p-3">
-                <p className="error-text">{errorMessage}</p>
-            </div>
-                )}
             </div>
         </div>
     );
