@@ -1,24 +1,31 @@
 import React from 'react';
+import portfolioData from '../../portfolioData';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGlobe } from '@fortawesome/free-solid-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+
+const gitHub = <FontAwesomeIcon icon={faGithub} size="lg" />
+const globe = <FontAwesomeIcon icon={faGlobe} size="lg" />
+
 
 export default function Portfolio() {
   return (
-    <div className='p-3'>
+    <div className='p-3 flex-row justify-center'>
       <h3>Portfolio</h3>
-      <p>
-        Donec a volutpat quam. Curabitur nec varius justo, sed rutrum ligula.
-        Curabitur pellentesque turpis sit amet eros iaculis, a mollis arcu
-        dictum. Ut vel ante eget massa ornare placerat. Etiam nisl orci, finibus
-        sodales volutpat et, hendrerit ut dolor. Suspendisse porta dictum nunc,
-        sed pretium risus rutrum eget. Nam consequat, ligula in faucibus
-        vestibulum, nisi justo laoreet risus, luctus luctus mi lacus sit amet
-        libero. Class aptent taciti sociosqu ad litora torquent per conubia
-        nostra, per inceptos himenaeos. Mauris pretium condimentum tellus eget
-        lobortis. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-        Donec placerat accumsan mi, ut congue neque placerat eu. Donec nec ipsum
-        in velit pellentesque vehicula sit amet at augue. Maecenas aliquam
-        bibendum congue. Pellentesque semper, lectus non ullamcorper iaculis,
-        est ligula suscipit velit, sed bibendum turpis dui in sapien.
-      </p>
+      <div className="row flex-row justify-space-between my-4">
+      {portfolioData.map((project) => (
+        <div key={project.id} className="col-12 col-xl-6 ">
+          <div className='m-2 mb-4 shadow project-card'>
+            <img src={project.image} className="card-img-top"></img>
+            <div className='card-body'>
+            <h5 className='card-title p-2 m-0'>{project.title}</h5>
+            <a href={project.gitHub} className="btn" target="_blank">{gitHub}</a>
+            <a href={project.deployed} className="btn" target="_blank">{globe}</a>
+            </div>
+          </div>
+        </div>
+      ))}
+      </div>
     </div>
   );
 }

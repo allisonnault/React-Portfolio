@@ -6,16 +6,18 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import './index.css';
 
-const mailIcon = <FontAwesomeIcon icon={faEnvelope} />
-const gitHub = <FontAwesomeIcon icon={faGithub} />
-const linkedIn = <FontAwesomeIcon icon={faLinkedin} />
+
+const mailIcon = <FontAwesomeIcon icon={faEnvelope} size="2xl" />
+const gitHub = <FontAwesomeIcon icon={faGithub} size="2xl" />
+const linkedIn = <FontAwesomeIcon icon={faLinkedin} size="2xl" />
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
-    <footer className="fixed-bottom">
+    <footer className="fixed-bottom footer">
       <div>
         <ul className='nav justify-content-center'>
           <li className='nav-item p-3'>

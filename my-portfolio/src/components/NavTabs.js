@@ -2,7 +2,7 @@ import React from 'react';
 
 function NavTabs({ currentPage, handlePageChange }) {
     return (
-        <div className='row container-fluid align-items-center p-3'>
+        <div className='header row container-fluid align-items-center p-3'>
             <div className='col-5'>
                 <h1>Allison Nault</h1>
             </div>
