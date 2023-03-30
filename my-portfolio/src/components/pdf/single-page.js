@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import { Document, Page, pdfjs } from 'react-pdf';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`
+
+const rightArrow = <FontAwesomeIcon icon={faArrowRight} />
+const leftArrow = <FontAwesomeIcon icon={faArrowLeft} />
 
 export default function SinglePage(props) {
   const [numPages, setNumPages] = useState(null);
@@ -26,29 +31,31 @@ export default function SinglePage(props) {
   const { pdf } = props;
 
   return (
-    <>
+    <div>
+        <div className='row'>
+            <div className="col">
+          Page {pageNumber || (numPages ? 1 : "--")} of {numPages || "--"}
+          </div>
+          <div className="col">
+        <button className="btn" disabled={pageNumber <= 1} onClick={previousPage}>
+         {leftArrow}
+        </button>
+        <button
+        className="btn"
+          disabled={pageNumber >= numPages}
+          onClick={nextPage}
+        >
+          {rightArrow}
+        </button>
+        </div>
+      </div>
       <Document
         file={pdf}
         options={{ workerSrc: "/pdf.worker.js" }}
         onLoadSuccess={onDocumentLoadSuccess}
       >
-        <Page wrap={false} pageNumber={pageNumber} />
+        <Page pageNumber={pageNumber} renderTextLayer={false}/>
       </Document>
-      <div>
-        <p>
-          Page {pageNumber || (numPages ? 1 : "--")} of {numPages || "--"}
-        </p>
-        <button type="button" disabled={pageNumber <= 1} onClick={previousPage}>
-          Previous
-        </button>
-        <button
-          type="button"
-          disabled={pageNumber >= numPages}
-          onClick={nextPage}
-        >
-          Next
-        </button>
-      </div>
-    </>
+    </div>
   );
 }
