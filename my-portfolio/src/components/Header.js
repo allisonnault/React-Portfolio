@@ -1,53 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Nav from './Nav';
+import AboutMe from './pages/AboutMe';
+import Portfolio from './pages/Portfolio';
+import Contact from './pages/Contact';
+import Resume from './pages/Resume';
 
-function NavTabs({ currentPage, handlePageChange }) {
+export default function PortfolioContainer() {
+    const [currentPage, setCurrentPage] = useState('AboutMe');
+
+    const renderPage = () => {
+        if (currentPage === 'AboutMe') {
+            return <AboutMe />;
+        }
+        if (currentPage === 'Portfolio') {
+            return <Portfolio />;
+        }
+        if (currentPage === 'Contact') {
+            return <Contact />;
+        }
+        return <Resume />;
+    };
+
+    const handlePageChange = (page) => setCurrentPage(page);
+
     return (
-        <div className='header row align-items-center p-3'>
-            <div className='col-5'>
-                <h1>Allison Nault</h1>
-            </div>
-            <div className='col'>
-                <ul className="nav justify-content-end">
-                    <li className="nav-item">
-                        <a
-                            href="#aboutMe"
-                            onClick={() => handlePageChange('AboutMe')}
-                            className={currentPage === 'AboutMe' ? 'nav-link active' : 'nav-link'}
-                        >
-                            About Me
-                        </a>
-                    </li>
-                    <li className="nav-item">
-                        <a
-                            href="#portfolio"
-                            onClick={() => handlePageChange('Portfolio')}
-                            className={currentPage === 'Portfolio' ? 'nav-link active' : 'nav-link'}
-                        >
-                            Portfolio
-                        </a>
-                    </li>
-                    <li className="nav-item">
-                        <a
-                            href="#contact"
-                            onClick={() => handlePageChange('Contact')}
-                            className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}
-                        >
-                            Contact
-                        </a>
-                    </li>
-                    <li className="nav-item">
-                        <a
-                            href="#resume"
-                            onClick={() => handlePageChange('Resume')}
-                            className={currentPage === 'Resume' ? 'nav-link active' : 'nav-link'}
-                        >
-                            Resume
-                        </a>
-                    </li>
-                </ul>
+        <div>
+            <Nav currentPage={currentPage} handlePageChange={handlePageChange} />
+            <div className='container p-3'>
+            {renderPage()}
             </div>
         </div>
     );
 }
-
-export default NavTabs;
