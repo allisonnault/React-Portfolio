@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/React-Portfolio/static/css/main.75cf03f8.css",
-    "main.js": "/React-Portfolio/static/js/main.ceb7b948.js",
+    "main.css": "/React-Portfolio/static/css/main.a657f2c7.css",
+    "main.js": "/React-Portfolio/static/js/main.079b8b51.js",
     "static/js/787.128fc6e9.chunk.js": "/React-Portfolio/static/js/787.128fc6e9.chunk.js",
     "static/media/myPic.jpeg": "/React-Portfolio/static/media/myPic.ff3fed5589e297db7e32.jpeg",
     "static/media/SocialNetwork.png": "/React-Portfolio/static/media/SocialNetwork.74ececb8e173fab5aa48.png",
@@ -12,12 +12,12 @@
     "static/media/techBlog.png": "/React-Portfolio/static/media/techBlog.9ca797e51865b2f22ea2.png",
     "static/media/CodeQuiz.png": "/React-Portfolio/static/media/CodeQuiz.3f636ba66d636db86e4d.png",
     "index.html": "/React-Portfolio/index.html",
-    "main.75cf03f8.css.map": "/React-Portfolio/static/css/main.75cf03f8.css.map",
-    "main.ceb7b948.js.map": "/React-Portfolio/static/js/main.ceb7b948.js.map",
+    "main.a657f2c7.css.map": "/React-Portfolio/static/css/main.a657f2c7.css.map",
+    "main.079b8b51.js.map": "/React-Portfolio/static/js/main.079b8b51.js.map",
     "787.128fc6e9.chunk.js.map": "/React-Portfolio/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.75cf03f8.css",
-    "static/js/main.ceb7b948.js"
+    "static/css/main.a657f2c7.css",
+    "static/js/main.079b8b51.js"
   ]
 }
