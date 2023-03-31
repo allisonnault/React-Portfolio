@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/my-portfolio/static/css/main.75cf03f8.css",
+    "main.js": "/my-portfolio/static/js/main.bbb1888f.js",
+    "static/js/787.128fc6e9.chunk.js": "/my-portfolio/static/js/787.128fc6e9.chunk.js",
+    "static/media/myPic.jpeg": "/my-portfolio/static/media/myPic.ff3fed5589e297db7e32.jpeg",
+    "static/media/SocialNetwork.png": "/my-portfolio/static/media/SocialNetwork.74ececb8e173fab5aa48.png",
+    "static/media/EmployeeTracker.png": "/my-portfolio/static/media/EmployeeTracker.d94d31c3bf2362615f14.png",
+    "static/media/WeatherDashboard.png": "/my-portfolio/static/media/WeatherDashboard.09e8451fc071b18dd9a7.png",
+    "static/media/resume.pdf": "/my-portfolio/static/media/resume.0136b92cfe9ac6c11b7b.pdf",
+    "static/media/ChicagoHotSpot.png": "/my-portfolio/static/media/ChicagoHotSpot.119fc44ebf1d33b47dc0.png",
+    "static/media/techBlog.png": "/my-portfolio/static/media/techBlog.9ca797e51865b2f22ea2.png",
+    "static/media/CodeQuiz.png": "/my-portfolio/static/media/CodeQuiz.3f636ba66d636db86e4d.png",
+    "index.html": "/my-portfolio/index.html",
+    "main.75cf03f8.css.map": "/my-portfolio/static/css/main.75cf03f8.css.map",
+    "main.bbb1888f.js.map": "/my-portfolio/static/js/main.bbb1888f.js.map",
+    "787.128fc6e9.chunk.js.map": "/my-portfolio/static/js/787.128fc6e9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.75cf03f8.css",
+    "static/js/main.bbb1888f.js"
+  ]
+}
