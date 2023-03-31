@@ -4,7 +4,7 @@ function Nav({ currentPage, handlePageChange }) {
     return (
         <div className='header row align-items-center p-3'>
             <div className='col-5'>
-                <h1>Allison Nault</h1>
+                <h1 className='display-5'>Allison Nault</h1>
             </div>
             <div className='col'>
                 <ul className="nav justify-content-end">

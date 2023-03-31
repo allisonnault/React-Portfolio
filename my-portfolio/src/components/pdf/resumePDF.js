@@ -40,19 +40,19 @@ export default function ResumePDF(props) {
           </div>
           <div className="col text-end">
         <button 
-        className="btn" 
+        className="btn icon" 
         disabled={pageNumber <= 1} 
         onClick={previousPage}>
          {leftArrow}
         </button>
         <button
-        className="btn"
+        className="btn icon"
           disabled={pageNumber >= numPages}
           onClick={nextPage}
         >
           {rightArrow}
         </button>
-        <button className="btn">
+        <button className="btn icon">
             <a href="https://drive.google.com/file/d/18Z0O3qdkGmwHSvSydfmXfRb8sy5Cozdj/view?usp=sharing" target="_blank">{download}</a>
         </button>
         </div>
