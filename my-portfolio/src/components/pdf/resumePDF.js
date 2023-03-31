@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 import { Document, Page, pdfjs } from 'react-pdf';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight, faArrowLeft, faFileArrowDown } from '@fortawesome/free-solid-svg-icons';
+import resume from '../../images/resume.pdf'
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`
 
 const rightArrow = <FontAwesomeIcon icon={faArrowRight} />
 const leftArrow = <FontAwesomeIcon icon={faArrowLeft} />
+const download = <FontAwesomeIcon icon={faFileArrowDown} />
 
-export default function SinglePage(props) {
+export default function ResumePDF(props) {
   const [numPages, setNumPages] = useState(null);
-  const [pageNumber, setPageNumber] = useState(1); //setting 1 to show fisrt page
+  const [pageNumber, setPageNumber] = useState(1);
 
   function onDocumentLoadSuccess({ numPages }) {
     setNumPages(numPages);
@@ -31,13 +33,16 @@ export default function SinglePage(props) {
   const { pdf } = props;
 
   return (
-    <div>
-        <div className='row'>
+    <div className="container">
+        <div className='row justify-content-between align-items-center'>
             <div className="col">
           Page {pageNumber || (numPages ? 1 : "--")} of {numPages || "--"}
           </div>
-          <div className="col">
-        <button className="btn" disabled={pageNumber <= 1} onClick={previousPage}>
+          <div className="col text-end">
+        <button 
+        className="btn" 
+        disabled={pageNumber <= 1} 
+        onClick={previousPage}>
          {leftArrow}
         </button>
         <button
@@ -47,8 +52,12 @@ export default function SinglePage(props) {
         >
           {rightArrow}
         </button>
+        <button className="btn">
+            <a href="https://drive.google.com/file/d/18Z0O3qdkGmwHSvSydfmXfRb8sy5Cozdj/view?usp=sharing" target="_blank">{download}</a>
+        </button>
         </div>
       </div>
+      <div>
       <Document
         file={pdf}
         options={{ workerSrc: "/pdf.worker.js" }}
@@ -56,6 +65,7 @@ export default function SinglePage(props) {
       >
         <Page pageNumber={pageNumber} renderTextLayer={false}/>
       </Document>
+      </div>
     </div>
   );
 }
