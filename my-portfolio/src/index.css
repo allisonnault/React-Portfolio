@@ -82,3 +82,7 @@ h3, h5 {
     border-style: none;
     
 }
+
+.contactInfo {
+    list-style: none;
+}
