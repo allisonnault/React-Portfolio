@@ -13,7 +13,7 @@ export default function AboutMe() {
       <div className='col-6'>
       <div>
       <p>
-          A highly motivated team leader with 2 years of professional sales experience in the fitness industry. A top performer able to leverage Hubspot CRM tools to increase productivity, ensure quality standards, and implement best practices. Experienced in overseeing multiple departments, training staff, and developing team members
+      A recent full-stack bootcamp graduate eager to apply everything I’ve learned and continue learning more. Highly detail oriented, and a great problem solver, I have always been a top performer. Experienced in overseeing multiple departments, training staff, and developing team members. 
         </p>
         <h3>Technical Skills</h3>
         <p>

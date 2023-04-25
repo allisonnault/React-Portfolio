@@ -4,8 +4,16 @@ import EmployeeTracker from './images/EmployeeTracker.png';
 import SocialNetwork from './images/SocialNetwork.png';
 import techBlog from './images/techBlog.png';
 import WeatherDashboard from './images/WeatherDashboard.png'
+import JADAQuiz from './images/JADAQuiz.png'
 
 const portfolioData = [
+   {
+      "title": "J.A.D.A Quiz App",
+      "gitHub": "https://github.com/Awele1111/JADA-Quiz-App",
+      "deployed": "https://jada-quiz-app.herokuapp.com/",
+      "image": JADAQuiz,
+      "id": 0
+   }, 
     {
        "title": "ChicagoHotSpot",
        "gitHub": "https://github.com/allisonnault/Chicago-Attractions",
