@@ -53,7 +53,7 @@ export default function ResumePDF(props) {
           {rightArrow}
         </button>
         <button className="btn icon">
-            <a href="https://drive.google.com/file/d/18Z0O3qdkGmwHSvSydfmXfRb8sy5Cozdj/view?usp=sharing" target="_blank">{download}</a>
+            <a href="https://drive.google.com/file/d/1Pt_tqlaF_UZY_eMPMJEVToK0t5hXUhdw/view?usp=sharing" target="_blank">{download}</a>
         </button>
         </div>
       </div>
